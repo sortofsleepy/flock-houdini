@@ -32,3 +32,20 @@ vector limit(vector vec; float max){
 float randFloat(float seed; int min; int max){
     return fit(rand(seed),0,1,min,max);
 }
+
+
+matrix3 rotateX(matrix3 mat; float angle){
+    vector axis = {1,0,0};
+    return rotate(mat, angle, axis);
+}
+
+matrix3 rotateY(matrix3 mat; float angle){
+    vector axis = {0,1,0};
+    return rotate(mat, angle, axis);
+}
+
+matrix3 rotateZ(matrix3 mat; float angle){
+    vector axis = {0,0,1};
+    return rotate(mat, angle, axis);
+}
+
