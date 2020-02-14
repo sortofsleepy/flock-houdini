@@ -49,3 +49,22 @@ matrix3 rotateZ(matrix3 mat; float angle){
     return rotate(mat, angle, axis);
 }
 
+// does a rotation on all three axis 
+matrix3 randomRotation(matrix3 mat; float angle){
+    vector axisX = {1,0,0};
+    vector axisY = {0,1,0};
+    vector axisZ = {0,0,1};
+    
+    matrix3 xMat = ident();
+    matrix3 yMat = ident();
+    matrix3 zMat = ident();
+    
+    
+    rotate(xMat,angle,axisX);
+    rotate(yMat,angle,axisY);
+    rotate(zMat,angle,axisZ);
+    
+    
+    return xMat * yMat * zMat;
+    
+}
