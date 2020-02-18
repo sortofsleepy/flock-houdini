@@ -91,3 +91,9 @@ vector quatRotateRandom(vector angles; vector seed){
     return qrotate(quaternion(rotations),seed);
     
 }
+
+// converts degree value to radians.
+float toRadians(float degrees){
+    return (deg * 3.14149) / 180.0;
+}
+
